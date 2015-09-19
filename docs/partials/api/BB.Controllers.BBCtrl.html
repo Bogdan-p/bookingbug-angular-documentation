@@ -1,0 +1,186 @@
+<h1><code ng:non-bindable="">BBCtrl</code>
+<div><span class="hint">controller in module <code ng:non-bindable="">BB</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bb-controllers-page bb-controllers-bbctrl-page"><p><a href="https://docs.angularjs.org/guide/controller">more about Controllers</a></p>
+<p>Controller BBCtrl</p>
+<h3 id="has-the-following-set-of-methods-" id="description_has-the-following-set-of-methods">Has the following set of methods:</h3>
+<ul>
+<li>$compile(&quot;<span bb-display-mode></span>&quot;) $scope, (cloned, scope)</li>
+<li>$scope.set_company(prms)</li>
+<li>$scope.initWidget(prms = {})</li>
+<li>$scope.initWidget2()</li>
+<li>setupDefaults(company_id)</li>
+<li>$scope.setLoadingPage(val)</li>
+<li>$scope.isLoadingPage()</li>
+<li>$scope.$on &#39;$locationChangeStart&#39;, (event)</li>
+<li>$scope.showPage(route, dont_record_page)</li>
+<li>$scope.jumpToPage(route)</li>
+<li>$scope.clearPage()</li>
+<li>$scope.getPartial(file)</li>
+<li>$scope.setPageLoaded()</li>
+<li>$scope.setPageRoute(route)</li>
+<li>$scope.decideNextPage(route)</li>
+<li>$scope.showCheckout()</li>
+<li>$scope.addItemToBasket()</li>
+<li>$scope.updateBasket()</li>
+<li>$scope.emptyBasket()</li>
+<li>$scope.deleteBasketItem(item)</li>
+<li>$scope.deleteBasketItems(items)</li>
+<li>$scope.clearBasketItem()</li>
+<li>$scope.setBasketItem(item)</li>
+<li>$scope.setReadyToCheckout(ready)</li>
+<li>$scope.moveToBasket()</li>
+<li>$scope.quickEmptybasket(options)</li>
+<li>$scope.setBasket(basket)</li>
+<li>$scope.logout(route)</li>
+<li>$scope.setAffiliate(affiliate)</li>
+<li>restoreBasket()</li>
+<li>$scope.setCompany(company, keep_basket)</li>
+<li>$scope.recordStep(step, title)</li>
+<li>$scope.setStepTitle(title)</li>
+<li>$scope.getCurrentStepTitle)</li>
+<li>$scope.checkStepTitle(title)</li>
+<li>$scope.loadStep(step)</li>
+<li>$scope.loadPreviousStep()</li>
+<li>$scope.loadStepByPageName(page_name)</li>
+<li>$scope.restart()</li>
+<li>$scope.setRoute(rdata)</li>
+<li>$scope.setBasicRoute(routes)</li>
+<li>$scope.skipThisStep()</li>
+<li>$scope.setUsingBasket(usingBasket)</li>
+<li>$scope.setClient(client)</li>
+<li>$scope.clearClient()</li>
+<li>$scope.parseDate(d)</li>
+<li>$scope.getUrlParam(param)</li>
+<li>$scope.base64encode(param)</li>
+<li>$scope.setLastSelectedDate(date)</li>
+<li>$scope.setLoaded(cscope)</li>
+<li>$scope.setLoadedAndShowError(scope, err, error_string)</li>
+<li>$scope.areScopesLoaded(cscope)</li>
+<li>$scope.notLoaded(cscope)</li>
+<li>$scope.broadcastItemUpdate()</li>
+<li>$scope.hidePage()</li>
+<li>$scope.bb.company_set()</li>
+<li>$scope.isAdmin()</li>
+<li>$scope.isAdminIFrame()</li>
+<li>$scope.reloadDashboard</li>
+<li>$scope.$debounce(tim)</li>
+<li>$scope.supportsTouch()</li>
+<li>$rootScope.$on &#39;show:loader&#39;, ()</li>
+<li>$rootScope.$on &#39;hide:loader&#39;, ()</li>
+</ul>
+<pre class="prettyprint linenums">
+//Dont change the cid as we use it in the app to identify this as the widget
+$scope.cid = "BBCtrl"
+</pre>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$scope">$scope</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$location">$location</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$rootScope">$rootScope</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$sessionStorage">$sessionStorage</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$window">$window</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$http">$http</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$localCache">$localCache</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$timeout">$timeout</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$sce">$sce</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$compile">$compile</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$sniffer">$sniffer</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$modal">$modal</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$log">$log</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$bbug">$bbug</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/angular-hal:halClient">halClient</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:BasketService">BasketService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:LoginService">LoginService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:AlertService">AlertService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Models:BBModel">BBModel</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:BBWidget">BBWidget</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:SSOService">SSOService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:ErrorService">ErrorService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/AppConfig">AppConfig</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:QueryStringService">QueryStringService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:QuestionServic">QuestionServic</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:LocaleService">LocaleService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:PurchaseService">PurchaseService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:SettingsService">SettingsService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/UriTemplate">UriTemplate</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_initwidget">initWidget(prms)</h3>
+<div class="initwidget"><div class="-scope-initwidget-page"><p>$scope.initWidget</p>
+</div><h5 id="methods_initwidget_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-scope-initwidget-page"><p>prms = {}</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_initwidget2">initWidget2()</h3>
+<div class="initwidget2"><div class="-scope-initwidget2-page"><p>$scope.initWidget2</p>
+<p>We&#39;re going to load a bunch of default stuff which we will vary by the widget
+there can be two promise stages - a first pass - then a second set or promises which might be created as a results of the first lot being laoded
+i.e. the active of reolving one promise, may need a second to be reoslved before the widget is created
+<pre class="prettyprint linenums">
+setup_promises2 = []
+setup_promises= []
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_isloadingpage">isLoadingPage()</h3>
+<div class="isloadingpage"><div class="-scope-isloadingpage-page"><p>$scope.isLoadingPage</p>
+</div></div>
+</li>
+<li><h3 id="methods_setloadingpage">setLoadingPage(val)</h3>
+<div class="setloadingpage"><div class="-scope-setloadingpage-page"><p>$scope.setLoadingPage</p>
+<p>Set if a page is loaded yet or now helps prevent double loading.</p>
+</div><h5 id="methods_setloadingpage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>val</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-scope-setloadingpage-page"><p>Info</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_set_company">set_company()</h3>
+<div class="set_company"><div class="-scope-set-company-page"><p>Legacy (already!) delete by Feb 2014!</p>
+</div></div>
+</li>
+<li><h3 id="methods_showpage">showPage(route, dont_record_page)</h3>
+<div class="showpage"><div class="-scope-showpage-page"><p>$scope.showPage</p>
+</div><h5 id="methods_showpage_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>route</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-scope-showpage-page"><p>Info</p>
+</div></td></tr><tr><td>dont_record_page</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-scope-showpage-page"><p>Info</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setupdefaults">setupDefaults(company_id)</h3>
+<div class="setupdefaults"><div class="setupdefaults-page"><p>setupDefaults</p>
+</div><h5 id="methods_setupdefaults_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>company_id</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setupdefaults-page"><p>Info</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

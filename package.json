@@ -1,0 +1,11 @@
+{
+  "name": "bb-ngdocs",
+  "version": "0.0.0",
+  "description": "BookingBug API Documentation",
+  "dependencies": {
+    "gulp": "3.9.0",
+    "gulp-ngdocs": "0.2.13",
+    "connect": "~3.3.2",
+    "serve-static": "~1.7.1"
+  }
+}

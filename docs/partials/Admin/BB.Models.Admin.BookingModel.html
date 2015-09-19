@@ -1,0 +1,112 @@
+<h1><code ng:non-bindable="">BookingModel</code>
+<div><span class="hint">service in module <code ng:non-bindable="">BB.Models:Admin</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bb-models-page bb-models-admin-bookingmodel-page"><p><br> ---------------------------------------------------------------------------------
+<br> NOTE
+<br> This is the TEST file.
+<br> Formatting of the documentation for this kind of functionality should be done first here
+<br> !To avoid repetition and to mentain consistency.
+<br> After the documentation for TEST file it is defined other files that have the same pattern can be also documented
+<br> This should be the file that sets the STANDARD.
+<br> ---------------------------------------------------------------------------------<br><br>
+This is BookingModel for Admin in BB.Models module that creates Admin_Booking object.</p>
+<pre class="prettyprint linenums">
+//Creates class Admin_booking that extends BaseModel
+class Admin_Booking extends BaseModel
+</pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">BookingModel($q, BBModel, BaseModel);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-models-page bb-models-admin-bookingmodel-page"><p>A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.</p>
+<ul>
+<li><br>
+<a href="https://docs.angularjs.org/api/ng/service/$q">read more</a></li>
+</ul>
+</div></td></tr><tr><td>BBModel</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bb-models-page bb-models-admin-bookingmodel-page"><p>Info
+<br>
+<a href="#/Admin/BB.Models:BBModel">more</a></p>
+</div></td></tr><tr><td>BaseModel</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bb-models-page bb-models-admin-bookingmodel-page"><p>Info</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="bb-models-page bb-models-admin-bookingmodel-page"><p>Newly created Admin_Booking object with the following set of methods:</p>
+<ul>
+<li>constructor(data)</li>
+<li>getPostData()</li>
+<li>statusTime()</li>
+<li>hasStatus(status)</li>
+<li>statusTime(status)</li>
+<li>sinceStatus(status)</li>
+<li>sinceStart(options)</li>
+<li>$update(data)</li>
+</ul>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_$update">$update(data)</h3>
+<div class="$update"><div class="-update-page"><p>Method $update. This method is added to Admin_Booking Object prototype.</p>
+</div><h5 id="methods_$update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-update-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_$update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="-update-page"><p>Admin_Booking</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_constructor">constructor(data)</h3>
+<div class="constructor"><div class="constructor-page"><p>Method constructor. Creates Admin_Booking object with following properties</p>
+<ul>
+<li>datetime</li>
+<li>start</li>
+<li>end</li>
+<li>title</li>
+<li>time</li>
+<li>allDay</li>
+<li>className</li>
+</ul>
+<pre class="prettyprint linenums">
+if @status == 3 @className = "status_blocked"
+else if @status == 4 @className = "status_booked"
+</pre>
+</div><h5 id="methods_constructor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="constructor-page"><p>Info</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getpostdata">getPostData()</h3>
+<div class="getpostdata"><div class="getpostdata-page"><p>Method getPostData. This method is added to Admin_Booking Object prototype. It returns the data object.</p>
+<p>data object is created with the following properties</p>
+<ul>
+<li>date</li>
+<li>time</li>
+<li>duration</li>
+<li>id</li>
+<li>person_id</li>
+</ul>
+<p>if question == true it will be created an array called results</p>
+<pre class="prettyprint linenums">
+data.questions = (q.getPostData() for q in @questions)
+</pre>
+</div><h5 id="methods_getpostdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getpostdata-page"><p>data</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hasstatus">hasStatus(status)</h3>
+<div class="hasstatus"><div class="hasstatus-page"><p>Method hasStatus. This method is added to Admin_Booking Object prototype.</p>
+</div><h5 id="methods_hasstatus_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>status</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="hasstatus-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_hasstatus_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="hasstatus-page"><p>multi_status[status]</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_sincestart">sinceStart(options)</h3>
+<div class="sincestart"><div class="sincestart-page"><p>Method sinceStart. This method is added to Admin_Booking Object prototype.</p>
+</div><h5 id="methods_sincestart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sincestart-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_sincestart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="sincestart-page"><p>Math.floor()</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_sincestatus">sinceStatus(status)</h3>
+<div class="sincestatus"><div class="sincestatus-page"><p>Method sinceStatus. This method is added to Admin_Booking Object prototype.</p>
+</div><h5 id="methods_sincestatus_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>status</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sincestatus-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_sincestatus_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="sincestatus-page"><p>Math.floor()</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_statustime">statusTime(status)</h3>
+<div class="statustime"><div class="statustime-page"><p>Method statusTime. This method is added to Admin_Booking Object prototype.</p>
+</div><h5 id="methods_statustime_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>status</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="statustime-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_statustime_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-date">date</a></td><td><div class="statustime-page"><p>null or new date based on multi_status[status] if multi_status[status] is true</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

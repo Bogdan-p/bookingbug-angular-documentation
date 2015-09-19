@@ -1,0 +1,78 @@
+<h1><code ng:non-bindable="">AdminLoginService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">BBAdmin</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Factory AdminLoginService</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">AdminLoginService($q, $rootScope, $cookies, halClient, BBModel, $sessionStorage, UriTemplate);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$q">read more</a></p>
+</div></td></tr><tr><td>$rootScope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Every application has a single root scope.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$rootScope">read more</a></p>
+</div></td></tr><tr><td>$cookies</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Provides read/write access to browser&#39;s cookies.
+<br>
+<a href="https://docs.angularjs.org/api/ngCookies/service/$cookies">read more</a></p>
+</div></td></tr><tr><td>halClient</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Info</p>
+</div></td></tr><tr><td>BBModel</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Info
+<br>
+<a href="tutorial/BB.Models:BBModel">more</a></p>
+</div></td></tr><tr><td>$sessionStorage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Info</p>
+</div></td></tr><tr><td>UriTemplate</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bbadmin-services-page bbadmin-services-adminloginservice-page"><p>Info
+<br>
+<a href="tutorial/UriTemplate">more</a></p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_checklogin">checkLogin()</h3>
+<div class="checklogin"><div class="checklogin-page"><p>Method checkLogin</p>
+</div><h5 id="methods_checklogin_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="checklogin-page"><p>defer.resolve() or defer.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getlogin">getLogin(options)</h3>
+<div class="getlogin"><div class="getlogin-page"><p>Method getLogin</p>
+</div><h5 id="methods_getlogin_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="getlogin-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_getlogin_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="getlogin-page"><p>defer.reject or defer.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isloggedin">isLoggedIn()</h3>
+<div class="isloggedin"><div class="isloggedin-page"><p>Method isLoggedIn</p>
+</div><h5 id="methods_isloggedin_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="isloggedin-page"><p>returns true if user is logged in otherwise returns false</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_login">login(form, options)</h3>
+<div class="login"><div class="login-page"><p>Method login</p>
+</div><h5 id="methods_login_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>form</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="login-page"><p>Info</p>
+</div></td></tr><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="login-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_login_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="login-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_logout">logout()</h3>
+<div class="logout"><div class="logout-page"><p>Method logout</p>
+</div><h5 id="methods_logout_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="logout-page"><p>defer.reject or defer.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setlogin">setLogin(user)</h3>
+<div class="setlogin"><div class="setlogin-page"><p>Method setLogin</p>
+</div><h5 id="methods_setlogin_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>user</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setlogin-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_setlogin_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="setlogin-page"><p>returns newly created user object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ssologin">ssoLogin(options, data)</h3>
+<div class="ssologin"><div class="ssologin-page"><p>Method ssoLogin</p>
+</div><h5 id="methods_ssologin_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ssologin-page"><p>Info</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ssologin-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_ssologin_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="ssologin-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_user">user()</h3>
+<div class="user"><div class="user-page"><p>Method user</p>
+</div><h5 id="methods_user_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="user-page"><p>returns $rootScope.use</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

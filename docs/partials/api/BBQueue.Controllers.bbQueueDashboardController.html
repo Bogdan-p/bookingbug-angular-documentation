@@ -1,0 +1,121 @@
+<h1><code ng:non-bindable="">bbQueueDashboardController</code>
+<div><span class="hint">controller in module <code ng:non-bindable="">BBQueue</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bbqueue-controllers-page bbqueue-controllers-bbqueuedashboardcontroller-page"><p><a href="https://docs.angularjs.org/guide/controller">more about Controllers</a></p>
+<p>Controller bbQueueDashboardController</p>
+<h3 id="has-the-following-set-of-methods-" id="description_has-the-following-set-of-methods">Has the following set of methods:</h3>
+<ul>
+<li>$scope.getSetup()</li>
+<li>$scope.getQueuers()</li>
+<li>$scope.overTrash(event, ui, set)<ul>
+<li>$scope.hoverOver(event, ui, obj, set)</li>
+</ul>
+</li>
+<li>$scope.dropQueuer(event, ui, server, trash)</li>
+<li>$scope.selectQueuer(queuer)</li>
+<li>$scope.selectDragQueuer(queuer)</li>
+<li>$scope.addQueuer(service)</li>
+<li>$scope.pusherSubscribe()<ul>
+<li>pusherEvent(res)</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$scope">$scope</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$log">$log</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BBAdmin.Services:AdminServiceService">AdminServiceService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BBQueue.Services:AdminQueuerService">AdminQueuerService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:ModalForm">ModalForm</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Models:BBModel">BBModel</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$interval">$interval</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$sessionStorage">$sessionStorage</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addqueuer">addQueuer()</h3>
+<div class="addqueuer"><div class="-scope-addqueuer-page"><pre class="prettyprint linenums">
+$scope.new_queuer.service_id = service.id
+service.$post('queuers', {}, $scope.new_queuer).then (queuer) -&gt; 
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_dropqueuer">dropQueuer()</h3>
+<div class="dropqueuer"><div class="-scope-dropqueuer-page"><pre class="prettyprint linenums">
+if $scope.drag_queuer
+ if trash
+   $scope.trash_hover = false
+   ...
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_getqueuers">getQueuers()</h3>
+<div class="getqueuers"><div class="-scope-getqueuers-page"><pre class="prettyprint linenums">
+return if $scope.waiting_for_queuers
+$scope.waiting_for_queuers = true
+params =
+ ...
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_getsetup">getSetup()</h3>
+<div class="getsetup"><div class="-scope-getsetup-page"><pre class="prettyprint linenums">
+params =
+  company: $scope.company
+AdminServiceService.query(params).then (services) -&gt;
+  ...
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_hoverover">hoverOver()</h3>
+<div class="hoverover"><div class="-scope-hoverover-page"><pre class="prettyprint linenums">
+console.log event, ui, obj, set
+$scope.$apply () -&gt;
+ obj.hover = set     
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_overtrash">overTrash()</h3>
+<div class="overtrash"><div class="-scope-overtrash-page"><pre class="prettyprint linenums">
+$scope.$apply () -&gt;
+$scope.trash_hover = set
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_pushersubscribe">pusherSubscribe()</h3>
+<div class="pushersubscribe"><div class="-scope-pushersubscribe-page"><pre class="prettyprint linenums">
+if $scope.company? && Pusher?
+ if !$scope.pusher?
+   $scope.pusher = new Pusher 'c8d8cea659cc46060608',
+     ...
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_selectdragqueuer">selectDragQueuer()</h3>
+<div class="selectdragqueuer"><div class="-scope-selectdragqueuer-page"><pre class="prettyprint linenums">
+$scope.drag_queuer = queuer 
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_selectqueuer">selectQueuer()</h3>
+<div class="selectqueuer"><div class="-scope-selectqueuer-page"><pre class="prettyprint linenums">
+if $scope.selected_queuer && $scope.selected_queuer == queuer
+  $scope.selected_queuer = null
+else
+...
+</pre>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

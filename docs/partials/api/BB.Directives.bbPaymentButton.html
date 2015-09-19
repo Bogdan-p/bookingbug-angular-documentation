@@ -1,0 +1,68 @@
+<h1><code ng:non-bindable="">bbPaymentButton</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">BB</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p><a href="https://docs.angularjs.org/guide/directive">more about Directives</a></p>
+<p>Directive BB.Directives:bbPaymentButton</p>
+<p>Has the following set of methods:</p>
+<ul>
+<li>getTemplate(type, scope)</li>
+<li>getButtonFormTemplate(scope)</li>
+<li>setClassAndValue(scope, element, attributes)</li>
+<li>linker(scope, element, attributes)</li>
+</ul>
+<pre class="prettyprint linenums">
+restrict: 'EA'
+replace: true
+scope: {
+  total: '='
+  bb: '='
+  decideNextPage: '='
+}
+link: linker
+</pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;bb-payment-button
+       $compile="{service}"
+       $sce="{service}"
+       $http="{service}"
+       $template-cache="{service}"
+       $q="{service}"
+       $log="{service}"&gt;
+&lt;/bb-payment-button&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY bb-payment-button
+     $compile="{service}"
+     $sce="{service}"
+     $http="{service}"
+     $template-cache="{service}"
+     $q="{service}"
+     $log="{service}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$compile</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p>Compiles an HTML string or DOM into a template and produces a template function, which can then be used to link scope and the template together.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$compile">more</a></p>
+</div></td></tr><tr><td>$sce</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p>$sce is a service that provides Strict Contextual Escaping services to AngularJS.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$sce">more</a></p>
+</div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p>The $http service is a core Angular service that facilitates communication with the remote HTTP servers via the browser&#39;s XMLHttpRequest object or via JSONP.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$http">more</a></p>
+</div></td></tr><tr><td>$templateCache</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p>$templateCache
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$templateCachee">more</a></p>
+</div></td></tr><tr><td>$q</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p>A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$q">more</a></p>
+</div></td></tr><tr><td>$log</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbpaymentbutton-page"><p>Simple service for logging.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$log">more</a></p>
+</div></td></tr></tbody></table></div>
+</div>

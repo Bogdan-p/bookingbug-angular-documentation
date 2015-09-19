@@ -1,0 +1,47 @@
+<h1><code ng:non-bindable="">BaseModel</code>
+<div><span class="hint">object in module <code ng:non-bindable="">BB</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bb-models-page bb-models-basemodel-page"><p>Build a dynamic injector for each of the models.
+This creates a service that is capable of creating any given model.
+It uses dynamic injection, to avoid a cuicular dependancy -
+as any model needs to be able to create instances of other models</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">BaseModel($q, $injector, $rootScope, $timeout);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-models-page bb-models-basemodel-page"><p>A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$q">read more</a></p>
+</div></td></tr><tr><td>$injector</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-models-page bb-models-basemodel-page"><p>$injector is used to retrieve object instances as defined by provider, instantiate types, invoke methods, and load modules.
+<br>
+<a href="https://docs.angularjs.org/api/auto/service/$injector">more</a></p>
+</div></td></tr><tr><td>$rootScope</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-models-page bb-models-basemodel-page"><p>Every application has a single root scope.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$rootScope">more</a></p>
+</div></td></tr><tr><td>$timeout</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-models-page bb-models-basemodel-page"><p>Angular&#39;s wrapper for window.setTimeout.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$timeoutmore">https://docs.angularjs.org/api/ng/service/$timeoutmore</a></p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="bb-models-page bb-models-basemodel-page"><p>Newly created Base object with the following set of methods:</p>
+<ul>
+<li>constructor(data)</li>
+<li>updateModel(data)</li>
+<li>_snakeToCamel(s)</li>
+<li>$buildOject(link)</li>
+<li>$buildOjectPromise(link)</li>
+<li>get(ikey)</li>
+<li>set(ikey, value)</li>
+<li>$href(rel, params)</li>
+<li>$has(rel)</li>
+<li>$flush(rel, params)</li>
+<li>$get(rel, params)</li>
+<li>$post(rel, params, dat)</li>
+<li>$put(rel, params, dat)</li>
+<li>$patch(rel, params, dat)</li>
+<li>$del(rel, params)</li>
+<li>$links()</li>
+<li>$toStore()</li>
+</ul>
+</div></td></tr></table></div>
+</div>

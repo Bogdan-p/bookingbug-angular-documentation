@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">SlotModel</code>
+<div><span class="hint">service in module <code ng:non-bindable="">BB.Models:Admin</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bb-models-page bb-models-admin-slotmodel-page"><p>This is SlotModel for Admin in BB.Models module that creates Admin_Slot object.</p>
+<pre class="prettyprint linenums">
+//Creates class Admin_Slot that extends TimeSlotModel
+class Admin_Slot extends TimeSlotModel
+</pre>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">SlotModel($q, BBModel, BaseModel, TimeSlotModel);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-models-page bb-models-admin-slotmodel-page"><p>A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$q">read more</a></p>
+</div></td></tr><tr><td>BBModel</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bb-models-page bb-models-admin-slotmodel-page"><p>Info
+<br>
+<a href="tutorial/BB.Models:BBModel">more</a></p>
+</div></td></tr><tr><td>BaseModel</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bb-models-page bb-models-admin-slotmodel-page"><p>Info</p>
+</div></td></tr><tr><td>TimeSlotModel</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bb-models-page bb-models-admin-slotmodel-page"><p>Info</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="bb-models-page bb-models-admin-slotmodel-page"><p>Newly created Admin_Slot object.</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_constructor">constructor(data)</h3>
+<div class="constructor"><div class="constructor-page"><p>Method constructor. Creates Admin_Slot object with following properties</p>
+<ul>
+<li>title</li>
+<li>status</li>
+<li>datetime</li>
+<li>title</li>
+<li>start</li>
+<li>end</li>
+<li>time</li>
+<li>allDay</li>
+<li>className</li>
+</ul>
+<pre class="prettyprint linenums">
+if @status == 3 @className = "status_blocked"
+else if @status == 4  @className = "status_booked"
+else if @status == 0 @className = "status_available"
+</pre>
+</div><h5 id="methods_constructor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="constructor-page"><p>Info</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

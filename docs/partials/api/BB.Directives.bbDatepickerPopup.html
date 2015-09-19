@@ -1,0 +1,74 @@
+<h1><code ng:non-bindable="">bbDatepickerPopup</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">BB</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bb-directives-page bb-directives-bbdatepickerpopup-page"><p>Directive BB.Directives:bbDatepickerPopup
+<br>
+Replaces the date parse method for the angular-ui datepicker popup. The picker
+defaults to US style dates when typing a date into the picker input, so
+05/09/2014 is translated as 9th May rather than the 5th September</p>
+<pre class="prettyprint linenums">
+ie8orLess = false
+//stop user typing in input field if using ie8 or less as the date gets a
+//little delyaed and outputs wrong date
+try
+  ie8orLess = window.parseInt(/MSIE\s*(\d)/.exec(window.navigator.userAgent)[1])
+catch e
+  ie8orLess = false
+
+restrict: 'A'
+//set low priority as we want to make sure the 'datepickerPopup' directive
+//runs first
+priority: -1
+require : 'ngModel'
+</pre>
+<h3 id="has-the-following-set-of-methods-" id="description_has-the-following-set-of-methods">Has the following set of methods:</h3>
+<ul>
+<li>link(scope, element, attrs, ngModel)</li>
+</ul>
+<p>This is the original effort at trying to allow the user to type the date in
+to the input field. It works ok but there are a few bugs relative to setting
+the ngmodel value and it then it dissapears during the digest loop</p>
+<ul>
+<li>getTimeRangeScope(scope)</li>
+</ul>
+<p>The date picker is sometimes in a nested controller so we need to find the
+ timerange scope as the &#39;selected_date&#39; property is assigned directly to
+the scope, which causes inheritance issues.</p>
+<ul>
+<li>$bbug(element).on &#39;keydown&#39;, (e)</li>
+</ul>
+<p>The date picker doesn&#39;t support the typing in of dates very well, or
+hiding the popup after typing a date.</p>
+<ul>
+<li>callDateHandler (date)</li>
+</ul>
+<p>Call the function which handles the date change.</p>
+<ul>
+<li>replacementDateParser(viewValue, returnKey)</li>
+</ul>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY bb-datepicker-popup
+     $parse="{service}"
+     $document="{service}"
+     $timeout="{service}"
+     $bbug="{model}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$parse</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbdatepickerpopup-page"><p>Converts Angular expression into a function.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$parse">more</a></p>
+</div></td></tr><tr><td>$document</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbdatepickerpopup-page"><p>A jQuery or jqLite wrapper for the browser&#39;s window.document object.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$document">more</a></p>
+</div></td></tr><tr><td>$timeout</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bb-directives-page bb-directives-bbdatepickerpopup-page"><p>Angular&#39;s wrapper for window.setTimeout.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$timeout">more</a></p>
+</div></td></tr><tr><td>$bbug</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bb-directives-page bb-directives-bbdatepickerpopup-page"><p>Releases the hold on the $ shortcut identifier, so that other scripts can use it.
+<br>
+<a href="#/api/$bbug">more</a></p>
+</div></td></tr></tbody></table></div>
+</div>

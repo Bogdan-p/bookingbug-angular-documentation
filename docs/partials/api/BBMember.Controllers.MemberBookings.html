@@ -1,0 +1,150 @@
+<h1><code ng:non-bindable="">MemberBookings</code>
+<div><span class="hint">controller in module <code ng:non-bindable="">BBMember</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bbmember-controllers-page bbmember-controllers-memberbookings-page"><p><a href="https://docs.angularjs.org/guide/controller">more about Controllers</a></p>
+<p>Controller MemberBookingsCtrl</p>
+<h3 id="has-the-following-set-of-methods-" id="description_has-the-following-set-of-methods">Has the following set of methods:</h3>
+<ul>
+<li>$scope.getUpcomingBookings()</li>
+<li>$scope.getPastBookings(num, type)</li>
+<li>$scope.flushBookings()</li>
+<li>$scope.edit(booking)</li>
+<li>$scope.cancel(booking)<ul>
+<li>controller($scope, $rootScope, $modalInstance, booking)</li>
+<li>$scope.confirm_delete()</li>
+<li>$scope.cancel</li>
+<li>booking</li>
+</ul>
+</li>
+<li>$scope.getBookings(params)</li>
+<li>$scope.cancelBooking(booking)</li>
+<li>$scope.getPrePaidBookings(params)</li>
+</ul>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$scope">$scope</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$modal">$modal</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$log">$log</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:MemberBookingService">MemberBookingService</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:ModalForm">ModalForm</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/BB.Services:MemberPrePaidBookingService">MemberPrePaidBookingService</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_cancel">cancel()</h3>
+<div class="cancel"><div class="-scope-cancel-page"><pre class="prettyprint linenums">
+modalInstance = $modal.open
+ templateUrl: "member_booking_delete_modal.html"
+ windowClass: "bbug"
+ controller: ($scope, $rootScope, $modalInstance, booking) -&gt;
+   $scope.controller = "ModalDelete"
+   $scope.booking = booking
+
+   $scope.confirm_delete = () -&gt;
+     $modalInstance.close(booking)
+
+   $scope.cancel = -&gt;
+     $modalInstance.dismiss "cancel"
+ resolve:
+   booking: -&gt;
+     booking
+modalInstance.result.then (booking) -&gt;
+ $scope.cancelBooking(booking)
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_cancelbooking">cancelBooking()</h3>
+<div class="cancelbooking"><div class="-scope-cancelbooking-page"><pre class="prettyprint linenums">
+$scope.loading = true
+MemberBookingService.cancel($scope.member, booking).then () -&gt;
+ if $scope.bookings
+   $scope.bookings = $scope.bookings.filter (b) -&gt; b.id != booking.id
+ if $scope.removeBooking
+   $scope.removeBooking(booking)
+ $scope.loading = false 
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_edit">edit()</h3>
+<div class="edit"><div class="-scope-edit-page"><pre class="prettyprint linenums">
+booking.getAnswersPromise().then (answers) -&gt;
+  for answer in answers.answers
+    booking["question#{answer.question_id}"] = answer.value
+  ModalForm.edit
+    model: booking
+    title: 'Booking Details'
+    templateUrl: 'edit_booking_modal_form.html'
+    windowClass: 'member_edit_booking_form'
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_flushbookings">flushBookings()</h3>
+<div class="flushbookings"><div class="-scope-flushbookings-page"><pre class="prettyprint linenums">
+params =
+ start_date: moment().format('YYYY-MM-DD')
+MemberBookingService.flush($scope.member, params)
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_getbookings">getBookings()</h3>
+<div class="getbookings"><div class="-scope-getbookings-page"><pre class="prettyprint linenums">
+$scope.loading = true
+defer = $q.defer()
+MemberBookingService.query($scope.member, params).then (bookings) -&gt;
+ $scope.loading = false
+ defer.resolve(bookings)
+, (err) -&gt;
+ $log.error err.data
+ $scope.loading = false
+defer.promise
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_getpastbooking">getPastBooking()</h3>
+<div class="getpastbooking"><div class="-scope-getpastbooking-page"><pre class="prettyprint linenums">
+date = moment().subtract(num, type)
+params =
+start_date: date.format('YYYY-MM-DD')
+end_date: moment().format('YYYY-MM-DD')
+$scope.getBookings(params).then (bookings) -&gt;
+$scope.past_bookings = bookings
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_getprepaidbookings">getPrePaidBookings()</h3>
+<div class="getprepaidbookings"><div class="-scope-getprepaidbookings-page"><pre class="prettyprint linenums">
+$scope.loading = true
+defer = $q.defer()
+MemberPrePaidBookingService.query($scope.member, params).then (bookings) -&gt;
+  $scope.loading = false
+  $scope.pre_paid_bookings = bookings
+  defer.resolve(bookings)
+, (err) -&gt;
+  $log.error err.data
+  $scope.loading = false
+defer.promise
+</pre>
+</div></div>
+</li>
+<li><h3 id="methods_getupcomingbookings">getUpcomingBookings()</h3>
+<div class="getupcomingbookings"><div class="-scope-getupcomingbookings-page"><pre class="prettyprint linenums">
+params =
+  start_date: moment().format('YYYY-MM-DD')
+$scope.getBookings(params).then (bookings) -&gt;
+  $scope.upcoming_bookings = bookings
+</pre>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

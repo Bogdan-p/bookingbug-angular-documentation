@@ -1,0 +1,204 @@
+<h1><code ng:non-bindable="">AdminBookingService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">BBAdmin</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p><br> ---------------------------------------------------------------------------------
+<br> NOTE
+<br> This is the TEST file.
+<br> Formatting of the documentation for this kind of functionality should be done first here
+<br> !To avoid repetition and to mentain consistency.
+<br> After the documentation for TEST file it is defined other files that have the same pattern can be also documented
+<br> This should be the file that sets the STANDARD.
+<br> ---------------------------------------------------------------------------------<br><br>
+Factory AdminBookingService</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">AdminBookingService($q, $window, BookingCollections, halClient, BBModel, UriTemplate);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p>A service that helps you run functions asynchronously, and use their return values (or exceptions) when they are done processing.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$q">read more</a></p>
+</div></td></tr><tr><td>$window</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p>A reference to the browser&#39;s window object.
+<br>
+<a href="https://docs.angularjs.org/api/ng/service/$window">read more</a></p>
+</div></td></tr><tr><td>BookingCollections</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p>Info</p>
+</div></td></tr><tr><td>halClient</td><td><a href="" class="label type-hint type-hint-model">model</a></td><td><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p>Info</p>
+</div></td></tr><tr><td>BBModel</td><td><a href="" class="label type-hint type-hint-service">service</a></td><td><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p>Info
+<br>
+<a href="tutorial/BB.Models:BBModel">more</a></p>
+</div></td></tr><tr><td>UriTemplate</td><td><a href="" class="label type-hint type-hint-constant">constant</a></td><td><div class="bbadmin-services-page bbadmin-services-adminbookingservice-page"><p>Info
+<br>
+<a href="tutorial/UriTemplate">more</a></p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addprivatenotetobooking">addPrivateNoteToBooking(prms, booking, note)</h3>
+<div class="addprivatenotetobooking"><div class="addprivatenotetobooking-page"><p>Method addPrivateNoteToBooking</p>
+</div><h5 id="methods_addprivatenotetobooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="addprivatenotetobooking-page"><p>Info</p>
+</div></td></tr><tr><td>booking</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addprivatenotetobooking-page"><p>Info</p>
+</div></td></tr><tr><td>note</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addprivatenotetobooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_addprivatenotetobooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="addprivatenotetobooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_addstatustobooking">addStatusToBooking(prms, booking, status)</h3>
+<div class="addstatustobooking"><div class="addstatustobooking-page"><p>Method addStatusToBooking</p>
+</div><h5 id="methods_addstatustobooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="addstatustobooking-page"><p>Info</p>
+</div></td></tr><tr><td>booking</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="addstatustobooking-page"><p>Info</p>
+</div></td></tr><tr><td>status</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="addstatustobooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_addstatustobooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="addstatustobooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_blocktimeforperson">blockTimeForPerson(prms, person)</h3>
+<div class="blocktimeforperson"><div class="blocktimeforperson-page"><p>Method blockTimeForPerson</p>
+<p>It creates a new deferred object, then return its promise property.
+<pre class="prettyprint linenums">
+deferred = $q.defer()
+</pre>
+<p>Gets the href for boogking
+<pre class="prettyprint linenums">
+href = "/api/v1/admin/{company_id}/people/{person_id}/block"
+</pre>
+<p>Is created a new uri
+<pre class="prettyprint linenums">
+uri = new UriTemplate(href).fillFromObject(prms || {})
+</pre>
+<p>halClien.$put
+<br>
+It creates a new Booking Model for Admin in BBmodel module
+<pre class="prettyprint linenums">
+uri = new UriTemplate(href).fillFromObject(prms || {})
+</pre>
+<p>If the promise is resolved the booking is updated
+<pre class="prettyprint linenums">
+deferred.resolve(booking)
+</pre>
+<p>If the promise is rejected it displays an error
+<pre class="prettyprint linenums">
+deferred.reject(err)
+</pre>
+<p>Newly created deferred object return its promise property
+<pre class="prettyprint linenums">
+deferred.promise
+</pre>
+</div><h5 id="methods_blocktimeforperson_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="blocktimeforperson-page"><p>Info</p>
+</div></td></tr><tr><td>person</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="blocktimeforperson-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_blocktimeforperson_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="blocktimeforperson-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_cancelbooking">cancelBooking(prms, booking)</h3>
+<div class="cancelbooking"><div class="cancelbooking-page"><p>Method cancelBooking</p>
+<p>It creates a new deferred object, then return its promise property.
+<pre class="prettyprint linenums">
+deferred = $q.defer()
+</pre>
+<p>Gets the href for boogking
+<pre class="prettyprint linenums">
+href = "/api/v1/admin/{company_id}/bookings/{id}?notify={notify}"
+</pre>
+<p>Is created a new uri
+<pre class="prettyprint linenums">
+uri = new UriTemplate(href).fillFromObject(prms || {})
+</pre>
+<p>If the promise is resolved the booking is canceled
+<pre class="prettyprint linenums">
+deferred.resolve(booking)
+</pre>
+<p>If the promise is rejected it displays an error
+<pre class="prettyprint linenums">
+deferred.reject(err)
+</pre>
+<p>Newly created deferred object return its promise property
+<pre class="prettyprint linenums">
+deferred.promise
+</pre>
+</div><h5 id="methods_cancelbooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cancelbooking-page"><p>Info</p>
+</div></td></tr><tr><td>booking</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="cancelbooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_cancelbooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="cancelbooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_deleteprivatenotefrombooking">deletePrivateNoteFromBooking(prms, booking, note)</h3>
+<div class="deleteprivatenotefrombooking"><div class="deleteprivatenotefrombooking-page"><p>Method deletePrivateNoteFromBooking</p>
+</div><h5 id="methods_deleteprivatenotefrombooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="deleteprivatenotefrombooking-page"><p>Info</p>
+</div></td></tr><tr><td>booking</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="deleteprivatenotefrombooking-page"><p>Info</p>
+</div></td></tr><tr><td>note</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="deleteprivatenotefrombooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_deleteprivatenotefrombooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="deleteprivatenotefrombooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getbooking">getBooking(prms)</h3>
+<div class="getbooking"><div class="getbooking-page"><p>Method getBooking.</p>
+<p>If a company exists and don&#39;t have an id it gets one
+<pre class="prettyprint linenums">
+if prms.company && !prms.company_id prms.company_id = prms.company.id
+</pre>
+<p>Gets the href for boogking
+<pre class="prettyprint linenums">
+href = "/api/v1/admin/{company_id}/bookings/{id}{?embed}"
+</pre>
+<p>Is created a new uri
+<pre class="prettyprint linenums">
+uri = new UriTemplate(href).fillFromObject(prms || {})
+</pre>
+<p>If the promise is resolved
+<pre class="prettyprint linenums">
+deferred.resolve(booking)
+</pre>
+<p>If the promise is rejected it displays an error
+<pre class="prettyprint linenums">
+deferred.reject(err)
+</pre>
+<p>Newly created deferred object return its promise property
+<pre class="prettyprint linenums">
+deferred.promise
+</pre>
+</div><h5 id="methods_getbooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="getbooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_getbooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="getbooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_query">query(prms)</h3>
+<div class="query"><div class="query-page"><p>Method query</p>
+</div><h5 id="methods_query_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="query-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_query_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="query-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updatebooking">updateBooking(prms, booking)</h3>
+<div class="updatebooking"><div class="updatebooking-page"><p>Method updateBooking</p>
+<p>It creates a new deferred object, then return its promise property.
+<pre class="prettyprint linenums">
+deferred = $q.defer()
+</pre>
+<p>Gets the href for boogking
+<pre class="prettyprint linenums">
+href = "/api/v1/admin/{company_id}/bookings/{id}"
+</pre>
+<p>Is created a new uri
+<pre class="prettyprint linenums">
+uri = new UriTemplate(href).fillFromObject(prms || {})
+</pre>
+<p>If the promise is resolved the booking is updated
+<pre class="prettyprint linenums">
+deferred.resolve(booking)
+</pre>
+<p>If the promise is rejected it displays an error
+<pre class="prettyprint linenums">
+deferred.reject(err)
+</pre>
+<p>Newly created deferred object return its promise property
+<pre class="prettyprint linenums">
+deferred.promise
+</pre>
+</div><h5 id="methods_updatebooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="updatebooking-page"><p>Info</p>
+</div></td></tr><tr><td>booking</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="updatebooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_updatebooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="updatebooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updateprivatenoteforbooking">updatePrivateNoteForBooking(prms, booking, note)</h3>
+<div class="updateprivatenoteforbooking"><div class="updateprivatenoteforbooking-page"><p>Method updatePrivateNoteForBooking</p>
+</div><h5 id="methods_updateprivatenoteforbooking_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>prms</td><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="updateprivatenoteforbooking-page"><p>Info</p>
+</div></td></tr><tr><td>booking</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="updateprivatenoteforbooking-page"><p>Info</p>
+</div></td></tr><tr><td>note</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="updateprivatenoteforbooking-page"><p>Info</p>
+</div></td></tr></tbody></table><h5 id="methods_updateprivatenoteforbooking_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="updateprivatenoteforbooking-page"><p>deferred.promise</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>
